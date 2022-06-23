@@ -1,0 +1,41 @@
+;
+;	File 'topol.top' was generated
+;	By user: odstrcil (526651)
+;	On host: comet-ln2.sdsc.edu
+;	At date: Tue Feb  9 11:02:55 2021
+;
+;	This is a standalone topology file
+;
+;	Created by:
+;	                    :-) GROMACS - gmx pdb2gmx, 2018.3 (-:
+;
+;	Executable:   /opt/gromacs/bin/gmx_mpi.real
+;	Data prefix:  /opt/gromacs
+;	Force field was read from current directory or a relative path - path added.
+;
+
+
+; Include forcefield parameters
+#include "./gromos54a7_atb_original.ff/forcefield.itp"
+
+; Include cyclodextrin topology
+#include "CBUT.itp"
+
+; Include ligand topology
+#include "dext.itp"
+
+; Include water topology
+#include "./gromos54a7_atb_original.ff/spc.itp"
+
+; Include topology for ions
+#include "./gromos54a7_atb_original.ff/ions.itp"
+
+[ system ]
+; Name
+Grunge ROck MAChoS in water
+
+[ molecules ]
+; Compound        #mols
+AOYB             1
+DJR4        		1
+SOL              2924
