@@ -1,1 +1,6 @@
 This contains inputs used to generate alanine dipeptide results.
+
+To run each set of simulations, go to each folder and the following command line options can be used:
+
+gmx grompp -f ../md.mdp -c ../md_config_start.gro -t ../md_config_start.cpt -p ../topol.top -o md_simulation.tpr
+gmx mdrun -deffnm md_simulation -plumed bias_plumed.dat
