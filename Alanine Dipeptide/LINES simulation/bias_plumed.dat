@@ -14,5 +14,5 @@ CUSTOM ...
 	PERIODIC=NO
 	FUNC=0.0*th0+1.0*th1
 ... CUSTOM
-EXTERNAL ARG=rc0,rc1 FILE=bias_iter2.grid LABEL=external0
-PRINT ARG=th0,th1,external0.bias FILE=results_iter2.txt STRIDE=25
+EXTERNAL ARG=rc0,rc1 FILE=bias.grid LABEL=external0
+PRINT ARG=th0,th1,external0.bias FILE=results_iteration.txt STRIDE=25
