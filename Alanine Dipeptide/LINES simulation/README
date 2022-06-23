@@ -1,6 +1,0 @@
-This folder contains the inputs needed to run a single MD simulation during a lines iteration.
-
-The amber03 forcefield is used and the simulation is run with GROMACS-2018.3. To run the simulation, the following code can be executed:
-
-gmx -f md.mdp -c md_config_start.gro -t md_config_start.cpt -p topol.top -o alanine_LINES.tpr
-gmx mdrun -deffnm alanine_LINES -plumed bias_plumed.dat
