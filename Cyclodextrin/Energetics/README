@@ -1,1 +1,6 @@
 Input files needed to replicate PMF computations
+
+To run each simulation, utilize the following command:
+
+gmx grompp -f ../md.mdp -c ../md_config_start.gro -t ../md_config_start.cpt -p ../topol.top -o cyclodextrin_run.tpr
+gmx mdrun -deffnm cyclodextrin_run -nsteps 50000000 -plumed BIASFILENAME.dat
