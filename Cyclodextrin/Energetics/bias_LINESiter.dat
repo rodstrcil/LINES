@@ -1,4 +1,4 @@
-FIT_TO_TEMPLATE reference=conf_ref.pdb TYPE=OPTIMAL
+FIT_TO_TEMPLATE reference=../../conf_ref.pdb TYPE=OPTIMAL
 WHOLEMOLECULES ENTITY0=1-147 ENTITY1=148-160
 v2: FIXEDATOM AT=2.25,2.25,1.5
 v3: FIXEDATOM AT=2.25,2.25,1.75
@@ -11,8 +11,8 @@ com0: COM ATOMS=1-147
 com1: COM ATOMS=148-160
 water: GROUP ATOMS=161-8932:3
 dist_rest: DISTANCE ATOMS=com1,com0 COMPONENTS
-uwall: UPPER_WALLS ARG=dist_rest.z,dist_rest.y,dist_rest.x AT=1.5,0.4,0.4 KAPPA=5000.0,5000.0,5000.0
-lwall: LOWER_WALLS ARG=dist_rest.z,dist_rest.y,dist_rest.x AT=-1.5,-0.4,-0.4 KAPPA=5000.0,5000.0,5000.0
+uwall: UPPER_WALLS ARG=dist_rest.z,dist_rest.y,dist_rest.x AT=1.5,0.4,0.4 KAPPA=500.0,500.0,500.0
+lwall: LOWER_WALLS ARG=dist_rest.z,dist_rest.y,dist_rest.x AT=-1.5,-0.4,-0.4 KAPPA=500.0,500.0,500.0
 CV0: DISTANCE ATOMS=com1,com0 COMPONENTS
 CV1: COORDINATION GROUPA=v2 GROUPB=water SWITCH={RATIONAL D_0=0.0 R_0=0.35 NN=6 MM=10} NLIST NL_CUTOFF=1 NL_STRIDE=5
 CV2: COORDINATION GROUPA=v3 GROUPB=water SWITCH={RATIONAL D_0=0.0 R_0=0.35 NN=6 MM=10} NLIST NL_CUTOFF=1 NL_STRIDE=5
@@ -47,4 +47,4 @@ external0: METAD ...
 	GRID_BIN=58,58
 	GRID_RFILE=bias_iter0.grid
 ... 
-PRINT ARG=CV0.z,CV1,CV2,CV3,CV4,CV5,CV6,CV7,CV8,CV9,CV10,CV11,external0.rbias,uwall.bias,lwall.bias FILE=results_iter0.txt STRIDE=25
+PRINT ARG=CV0.z,CV1,CV2,CV3,CV4,CV5,CV6,CV7,CV8,CV9,CV10,CV11,external0.rbias,uwall.bias,lwall.bias FILE=results.txt STRIDE=25
