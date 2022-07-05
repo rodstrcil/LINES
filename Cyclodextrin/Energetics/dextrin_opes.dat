@@ -1,0 +1,14 @@
+FIT_TO_TEMPLATE reference=conf_ref.pdb TYPE=OPTIMAL
+WHOLEMOLECULES ENTITY0=1-147 ENTITY1=148-160
+com0: COM ATOMS=1-147
+com1: COM ATOMS=148-160
+dist_rest: DISTANCE ATOMS=com1,com0 COMPONENTS
+uwall: UPPER_WALLS ARG=dist_rest.z,dist_rest.y,dist_rest.x AT=1.5,0.4,0.4 KAPPA=5000.0,5000.0,5000.0
+lwall: LOWER_WALLS ARG=dist_rest.z,dist_rest.y,dist_rest.x AT=-1.5,-0.4,-0.4 KAPPA=5000.0,5000.0,5000.0
+CV0: DISTANCE ATOMS=com1,com0 COMPONENTS
+
+metad: OPES_METAD ...
+   FILE=Kernels.data TEMP=300 ARG=CV0.z PACE=500 SIGMA=0.05 STATE_RFILE=Restart.data STATE_WFILE=State.data STATE_WSTRIDE=500*100 BIASFACTOR=inf
+...
+
+PRINT ARG=CV0.z,CV0.y,CV0.x,metad.bias,uwall.bias,lwall.bias FILE=results_dextrin_opes.txt STRIDE=25
