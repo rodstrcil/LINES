@@ -1,1 +1,5 @@
 This folder contains the files needed to replicate the kinetic computations for the Cyclodextrin system
+
+To run each simulation, execute the following code:
+
+bash SHELL_NAME
