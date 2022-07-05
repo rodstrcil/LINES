@@ -1,7 +1,7 @@
 i=1
 while [ $i -le 100 ]
 do
-output_file=md_run${i}
+output_file=md_run_noWCN${i}
 
 cat >plumed.dat << EOF
 FIT_TO_TEMPLATE reference=../conf_ref.pdb TYPE=OPTIMAL
